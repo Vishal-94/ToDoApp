@@ -1,0 +1,202 @@
+table{
+    width: 100%;
+}
+
+.to-list{
+    padding: 10px;
+}
+
+.icon-cursor{
+    cursor: pointer;
+}
+
+::ng-deep .mat-checkbox-frame,
+::ng-deep .mat-checkbox-background {
+      border-radius: 50% !important;
+      /* color: #34b233; */
+  }
+
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-ripple .mat-ripple-element {
+  opacity: 0.03 !important;
+  background-color: #34b233!important;
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background,.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background-color: #34b233;
+}
+
+
+.checkedClass{
+    /* text-decoration: line-through; */
+    background-color: lightpink;
+    /* background-color: darkseagreen; */
+}
+/* darkseagreen */
+.uncheckedClass{
+  /* background-color: lightsalmon; */
+    text-decoration: none;
+    background-color: rgb(203, 195, 227);
+}
+
+
+.mat-button.mat-primary .mat-button-focus-overlay {
+  background-color: black;
+}
+
+
+.close-dialog-icon{
+    position: sticky;
+    font-size: large;
+    left: 95%;
+    float: right;
+    background: none !important;
+}
+
+.align-center{
+    text-align: center !important;
+}
+
+.task-txt{
+    background: lightblue;
+    color: var(--apply-filter-button-color) !important;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid #808080;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+/* dialog box modal */
+
+.fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+  
+  .container {
+    padding: 10px;
+  }
+  
+  .form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .form-element {
+    /* padding: 5px 0px 25px 2px; */
+    width: 100%;
+  }
+  
+  .button {
+    width: 100%;
+  }
+
+.todoapp{
+    /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mat-dialog-actions {
+    justify-content: flex-end;
+}
+
+.title-color{
+  background-color: lightgray;
+}
+
+.table-header-title{
+  font-size: medium;
+  font-weight: 600;
+  color: black;
+}
+
+
+.mat-column-title {
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 28% !important;
+  width: 20% !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.mat-column-date {
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 28% !important;
+  width: 18% !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.mat-column-description {
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 28% !important;
+  width: 20% !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.mat-column-status {
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 28% !important;
+  width: 20% !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.mat-column-Action {
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 28% !important;
+  width: 5% !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.mat-column-delete {
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 28% !important;
+  width: 5% !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.search {
+  border: 1px solid grey;
+  border-radius: 5px;
+  height: 25px;
+  width: 25%;
+  padding: 2px 23px 2px 30px;
+  outline: 0;
+  background-color: #f5f5f5;
+
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  min-width: 100px;
+  margin-bottom: 10px
+}
+
+.clear-icon {
+  position: absolute;
+  left: 27%;
+  cursor: pointer;
+}

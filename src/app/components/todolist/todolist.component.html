@@ -1,0 +1,48 @@
+
+<div class="to-list">
+
+  <div class="wrapper">
+      <input matInput type="text" class="search" (keyup)="applyFilter($event.target)" placeholder="Search">
+      <mat-icon class="clear-icon">search</mat-icon>
+  </div>
+
+    <table mat-table [dataSource]="toDoList_records" matSort  class="mat-elevation-z8">
+        <ng-container matColumnDef="title">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="table-header-title"> Title </th>
+          <td mat-cell *matCellDef="let element" [ngClass]="element.status ? 'checkedClass' : 'uncheckedClass'" > {{element.title}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="table-header-title"> Date </th>
+          <td mat-cell *matCellDef="let element" [ngClass]="element.status ? 'checkedClass' : 'uncheckedClass'"> {{element.date | date: 'M/d/yy' }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="table-header-title"> Description </th>
+          <td mat-cell *matCellDef="let element" [ngClass]="element.status ? 'checkedClass' : 'uncheckedClass'"> {{element.description}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+          <th  matTooltip="Action" mat-header-cell *matHeaderCellDef mat-sort-header class="table-header-title"> {{ 'Status' }} </th>
+          <td  mat-cell *matCellDef="let element"  [ngClass]="element.status ? 'checkedClass' : 'uncheckedClass'" ><span class="icon-cursor"  ><mat-checkbox class="custom-frame" [checked]="element.status"  (change)="isCheckValue($event, element)"> </mat-checkbox></span>
+        </ng-container>
+
+        <ng-container matColumnDef="Action">
+          <th  matTooltip="Action" mat-header-cell *matHeaderCellDef mat-sort-header class="table-header-title"> {{ 'Action' }} </th>
+          <td  mat-cell *matCellDef="let element"  [ngClass]="element.status ? 'checkedClass' : 'uncheckedClass'"  ><span class="icon-cursor" (click) = "editToDoRecord(element)"><mat-icon>edit</mat-icon></span>
+        </ng-container>
+    
+        <ng-container matColumnDef="Delete">
+          <th  matTooltip="Delete" mat-header-cell *matHeaderCellDef mat-sort-header ></th>
+          <td  mat-cell *matCellDef="let element"  [ngClass]="element.status ? 'checkedClass' : 'uncheckedClass'"  ><span class="icon-cursor" (click) = "deleteToDoRecord(element)"><mat-icon>delete</mat-icon></span>
+        </ng-container>
+        
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+      <mat-paginator [pageSizeOptions] ="[7, 10, 25, 100]" showFirstLastButtons></mat-paginator>
+</div>
+
+  
+  

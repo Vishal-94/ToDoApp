@@ -1,0 +1,30 @@
+/* .todoapp {
+	margin: 0 auto;
+	position: relative;
+	color: #4d4d4d;
+	min-width: 230px;
+	max-width: 550px;
+	position: relative;
+} */
+
+.todoapp{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+.mat-card{
+    background-color: #eee;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  
